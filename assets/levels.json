@@ -1,0 +1,108 @@
+{
+  "levels": [
+    {
+      "id": "lvl1",
+      "title": "Fundamentos",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Qué es análisis de datos",
+          "content": "El análisis de datos implica recolectar, limpiar y explorar datos para responder preguntas y tomar decisiones.",
+          "minCorrect": 2,
+          "quiz": [
+            {
+              "type": "multiple",
+              "prompt": "¿Cuál es la media de [2, 4, 6]?",
+              "choices": ["2", "3", "4", "6"],
+              "correctIndex": 2
+            },
+            {
+              "type": "drag",
+              "prompt": "Empareja el término con su definición",
+              "pairs": [
+                {"left": "Media", "right": "Promedio"},
+                {"left": "Mediana", "right": "Valor central"},
+                {"left": "Moda", "right": "Valor más frecuente"}
+              ]
+            },
+            {
+              "type": "order",
+              "prompt": "Ordena el flujo de trabajo EDA",
+              "order": ["Cargar datos", "Limpiar", "Explorar", "Visualizar"]
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Tipos de variables",
+          "content": "Variables cualitativas (nominal, ordinal) y cuantitativas (intervalo, razón).",
+          "quiz": [
+            {
+              "type": "multiple",
+              "prompt": "¿Cuál NO es cualitativa?",
+              "choices": ["Nominal", "Ordinal", "Razón", "Todas son cualitativas"],
+              "correctIndex": 2
+            },
+            {
+              "type": "order",
+              "prompt": "Ordena por grado de medición (menor→mayor)",
+              "order": ["Nominal", "Ordinal", "Intervalo", "Razón"]
+            },
+            {
+              "type": "drag",
+              "prompt": "Empareja ejemplos",
+              "pairs": [
+                {"left": "Nominal", "right": "Color"},
+                {"left": "Ordinal", "right": "Satisfacción (Bajo/Medio/Alto)"},
+                {"left": "Razón", "right": "Ingresos"}
+              ]
+            }
+          ]
+        },
+        { "id": "l3", "title": "Medidas de tendencia", "content": "Media, mediana, moda", "quiz": [
+          {"type":"multiple","prompt":"La mediana es...","choices":["Promedio","Valor central","Más repetido"],"correctIndex":1},
+          {"type":"drag","prompt":"Empareja","pairs":[{"left":"Moda","right":"Frecuencia máxima"},{"left":"Media","right":"Promedio"}]},
+          {"type":"order","prompt":"Ordena del más robusto al ruido","order":["Mediana","Moda","Media"]}
+        ]},
+        { "id": "l4", "title": "Dispersión", "content": "Rango, varianza, desviación estándar", "quiz": [
+          {"type":"multiple","prompt":"La varianza es...","choices":["Raíz de la desviación","Cuadrado de la desviación estándar","Promedio de cuadrados de desviaciones"],"correctIndex":2},
+          {"type":"order","prompt":"Ordena por complejidad","order":["Rango","Varianza","Desviación estándar"]},
+          {"type":"drag","prompt":"Empareja","pairs":[{"left":"Rango","right":"Max - Min"},{"left":"Desv. Est.","right":"Raíz de la varianza"}]}
+        ]},
+        { "id": "l5", "title": "Visualización", "content": "Gráficos básicos: barras, líneas, histograma", "quiz": [
+          {"type":"multiple","prompt":"¿Gráfico para distribución?","choices":["Barras","Histograma","Lineal"],"correctIndex":1},
+          {"type":"drag","prompt":"Empareja","pairs":[{"left":"Barras","right":"Categorías"},{"left":"Líneas","right":"Serie temporal"}]},
+          {"type":"order","prompt":"Ordena el flujo","order":["Elegir variable","Elegir tipo de gráfico","Interpretar"]}
+        ]}
+      ]
+    },
+    {
+      "id": "lvl2",
+      "title": "Descriptivo con práctica",
+      "lessons": [
+        { "id": "l1", "title": "EDA con tablas", "content": "Explora tablas y estadísticas", "quiz": [
+          {"type":"multiple","prompt":"¿Qué función calcula media? (pandas)","choices":["df.mean()","df.avg()","df.media()"],"correctIndex":0}
+        ]},
+        { "id": "l2", "title": "Limpieza básica", "content": "Valores nulos y duplicados", "quiz": [
+          {"type":"multiple","prompt":"¿Para nulos?","choices":["dropna","dropnulls","removeNa"],"correctIndex":0}
+        ]},
+        { "id": "l3", "title": "Outliers", "content": "Detección y tratamiento", "quiz": [
+          {"type":"multiple","prompt":"Método común","choices":["IQR","FFT","SVD"],"correctIndex":0}
+        ]},
+        { "id": "l4", "title": "Visualización práctica", "content": "Matplotlib/Seaborn conceptos", "quiz": [
+          {"type":"multiple","prompt":"¿Gráfico densidad?","choices":["KDE","Pie","Box"],"correctIndex":0}
+        ]},
+        { "id": "l5", "title": "Reporte final", "content": "Comunica hallazgos", "quiz": [
+          {"type":"multiple","prompt":"¿Qué no va en reporte?","choices":["Sesgos y límites","Resultados","Chistes internos"],"correctIndex":2}
+        ]}
+      ]
+    },
+    { "id": "lvl3", "title": "Modelos y evaluación", "lessons": [
+      { "id": "l1", "title": "Regresión", "content":"Conceptos", "quiz":[{"type":"multiple","prompt":"Métrica de regresión","choices":["MAE","Accuracy","AUC"],"correctIndex":0}]},
+      { "id": "l2", "title": "Clasificación", "content":"Conceptos", "quiz":[{"type":"multiple","prompt":"Métrica de clasificación","choices":["RMSE","F1","MAPE"],"correctIndex":1}]},
+      { "id": "l3", "title": "Overfitting", "content":"Conceptos", "quiz":[{"type":"multiple","prompt":"Técnica contra overfitting","choices":["Regularización","Aumentar complejidad","Eliminar validación"],"correctIndex":0}]},
+      { "id": "l4", "title": "Validación cruzada", "content":"Conceptos", "quiz":[{"type":"multiple","prompt":"k-fold común","choices":["5 o 10","2","50"],"correctIndex":0}]},
+      { "id": "l5", "title": "Ética y sesgos", "content":"Conceptos", "quiz":[{"type":"multiple","prompt":"¿Qué evitar?","choices":["Auditorías de sesgo","Variables sensibles sin control","Documentación"],"correctIndex":1}]}
+    ]}
+  ]
+}
