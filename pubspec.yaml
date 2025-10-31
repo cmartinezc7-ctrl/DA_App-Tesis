@@ -37,6 +37,11 @@ dependencies:
   google_fonts: ^6.3.2
   shared_preferences: ^2.5.3
   font_awesome_flutter: ^10.10.0
+  audioplayers: ^6.1.0
+  firebase_core: ^4.2.0
+  firebase_auth: ^6.1.1
+  cloud_firestore: ^6.0.3
+  google_sign_in: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -94,14 +99,12 @@ flutter:
   assets:
     - assets/logo.png
     - assets/logo_splash.png
-    - assets/mascot.png
+    - assets/mascota.png
+    - assets/pregunta1.png
+    - assets/pregunta2.png
+    - assets/pregunta3.png
+    - assets/pregunta4.png
     - assets/levels.json
+    - assets/sounds/
 
-#splash nativo
-flutter_native_splash:
-  color: "#635BFF"     # lila/azul del prototipo
-  image: assets/logo_splash.png
-  android_12:
-    image: assets/logo_splash.png
-    color: "#635BFF"
-  fullscreen: true
+
